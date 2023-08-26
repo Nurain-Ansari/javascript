@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.main {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    margin: 18% 35% 0 35%;
+    background-color: #f56211;
+}
+h4#count {
+    width: 56px;
+    height: 30px;
+    background-color: #5ae22b;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+button {
+    background-color: #d7d6d6;
+    height: 30px;
+    width: 100px;
+}
+</style>
+
+<body>
+    <div class="main">
+        <div class="plus">
+            <button onclick="increment()">Plus</button>
+        </div>
+        <div class="show">
+            <h4 id="count">0</h4>
+        </div>
+        <div class="minus">
+            <button onclick="decrement()">Minus</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    let num = 0;
+    function increment() {
+        num = num + 1;
+        console.log("num", num);
+        document.getElementById("count").innerHTML = num;
+    }
+
+    function decrement() {
+        if (num <= 0) {
+            num = 0;
+            alert('cant decrement')
+            console.log("num", num);
+            return document.getElementById("count").innerHTML = num;
+        } else {
+            num = num - 1;
+            console.log("num", num);
+            document.getElementById("count").innerHTML = num;
+        }
+
+    }
+    console.log(num);
+</script>
+
+</html>
