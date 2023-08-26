@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let isRaining = false
+        isRaining
+            ? console.log('You need a rain coat.')
+            : console.log('No need for a rain coat.')
+
+        let riwan = false
+        riwan
+            ? document.writeln('hello riwan')
+            : document.writeln('tata riwan')
+
+        document.writeln('<br>')
+
+        // switch case 
+        switch (riwan) {
+            case 1:
+                document.writeln('riwan')
+                break
+            case 2:
+                document.writeln('jiwan')
+                break
+            case 3:
+                document.writeln('tiwan')
+                break
+            default:
+                document.writeln('nothing')
+        }
+        document.writeln('<br>')
+        for (let i = 5; i > 0; i--) {
+            document.write(i)
+            document.writeln('<br>')
+        }
+
+        for (let i = 1; i < 5; i++) {
+            document.writeln(`${i} * ${i} = ${i * i}`)
+        }
+
+        for (let i = 0; i <= 5; i++) {
+            document.writeln(`${i} * ${i} = ${i * i}`)
+            document.writeln('<br>')
+        }
+        // 5 4 3 2 1 0
+        document.writeln('<br>')
+        const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+        const newArr = []
+        for (let i = 0; i < 5; i++) {
+            newArr.push(countries[i].toUpperCase())
+        }
+        for (let i = 0; i < 5; i++) {
+            document.writeln(newArr[i])
+            document.writeln('<br>')
+        }
+        let i = 0;
+        while (i < 5) {
+            document.writeln(`${i}`)
+            i++
+        }
+        document.writeln('<br>')
+        document.writeln('<br>')
+
+        for (const element of countries) {
+            document.writeln(element)
+            document.writeln('<br>')
+
+        }
+
+        for (let i = 0; i < 7; i++) {
+            for (let j = 0; j <= i; j++) {
+                // console.log('#');
+
+                document.writeln('#')
+            }
+            document.writeln('<br>')
+        }
+
+        function gfg_Run() {
+            console.log(Array.from({
+                length: 10
+            }, () => Math.floor(Math.random() * 10)));
+        }
+        gfg_Run()
+
+        function random() {
+            console.log(Array.from({ length: 5 }, () => Math.floor(Math.random() * 21)))
+        }
+        random()
+
+        const languages = [
+            'English',
+            'Finnish',
+            'English',
+            'French',
+            'Spanish',
+            'English',
+            'French',
+        ]
+
+        const setOfLanguages = new Set(languages)
+
+        for (const language of setOfLanguages) {
+            console.log(language)
+        }
+
+        console.log(languages.length)
+        const companies = new Set() // creating an empty set
+        console.log(companies.size) // 0
+
+        companies.add('Google') // add element to the set
+        companies.add('Facebook')
+        companies.add('Amazon')
+        companies.add('Oracle')
+        companies.add('Microsoft')
+        console.log(companies.size) // 5 elements in the set
+        console.log(companies)
+
+        const companies1 = ['Google', 'Facebook', 'Amazon', 'Oracle', 'Microsoft']
+        setOfCompanies = new Set()
+        for (const company of companies1) {
+            setOfCompanies.add(company.toLocaleUpperCase())
+        }
+        console.log(setOfCompanies)
+        console.log(setOfCompanies.delete('FACEBOOK'))
+        console.log(setOfCompanies.add('NURAIN'))
+        console.log(companies.has('Apple')) // false
+        console.log(companies.has('Facebook')) // true
+        console.log(companies.clear())
+
+
+        const languages2 = [
+            'English',
+            'Finnish',
+            'English',
+            'French',
+            'Spanish',
+            'English',
+            'French',
+        ];
+        const lang = new Set(languages2);
+        console.log(lang);
+        console.log(lang.size);
+        const counts = [];
+        const count = {};
+        console.log(count)
+        console.log(count)
+        for (const l of languages2) {
+            const lng = languages.filter((lang) => lang === l)
+            console.log(lng)
+            counts.push({ lang: l, count: lng.length })
+
+        }
+        console.log(counts)
+        const languages21 = [
+            'English',
+            'Finnish',
+            'English',
+            'French',
+            'Spanish',
+            'English',
+            'French',
+        ];
+
+        const counts1 = languages21.reduce((count, lang) => {
+            count[lang] = (count[lang] || 0) + 1;
+            return count;
+        }, {});
+
+        console.log(counts1);
+
+
+        let a = [1, 2, 3, 4, 5]
+        let b = [3, 4, 5, 6]
+
+        let A = new Set(a)
+        let B = new Set(b)
+
+        let c = a.filter((num) => B.has(num))
+        let C = new Set(c)
+
+        console.log(C)
+
+        console.log(3 ** 3)
+
+        const countriesMap = new Map()
+        console.log(countriesMap.size) // 0
+        countriesMap.set('Finland', 'Helsinki')
+        countriesMap.set('Sweden', 'Stockholm')
+        countriesMap.set('Norway', 'Oslo')
+        console.log(countriesMap)
+        console.log(countriesMap.size)
+            
+    </script>
+</body>
+
+</html>
