@@ -197,7 +197,99 @@
         countriesMap.set('Norway', 'Oslo')
         console.log(countriesMap)
         console.log(countriesMap.size)
-            
+
+        const ex = new Set()
+        for (let i = 0; i < 10; i++) {
+            ex.add(i)
+        }
+        console.log(ex)
+
+        ex.clear()
+        console.log(ex)
+
+        const stringArray = ['apple', 'banana', 'orange', 'grape', 'pear', 'apple', 'banana', 'hello', 'naloo', 'lll'];
+
+        const uniqueStrings = new Set();
+
+        for (const str of stringArray) {
+            if (uniqueStrings.size === 7) {
+                break; // Stop adding elements once the set contains 5 unique elements
+            }
+            uniqueStrings.add(str);
+
+        }
+
+        console.log(uniqueStrings);
+
+
+        //Create a map of countries and number of characters of a country
+        const countries3 = [
+            'United States',
+            'Canada',
+            'Australia',
+            'Germany',
+            'Japan'
+        ];
+        const countryCharCountMap = new Map();
+        for (const country of countries3) {
+            countryCharCountMap.set(country, country.length)
+        }
+        console.log()
+
+        const setA = new Set([1, 2, 3, 4]);
+        const setB = new Set([3, 4, 5, 6]);
+
+        const union = new Set([...setA, ...setB]);
+        console.log("union set is here");
+        console.log(union);
+
+        const intersection = new Set([...setA].filter(element => setB.has(element)));
+        console.log("intersection");
+        console.log(intersection);
+
+        //Destructuring and Spread
+
+        const numbers = [1, 2, 3]
+        let [numOne, numTwo, numThree] = numbers
+
+        console.log(numOne, numTwo, numThree)
+
+        //Another Example
+        const person = {
+            firstName: 'Asabeneh',
+            lastName: 'Yetayeh',
+            age: 250,
+            country: 'Finland',
+            job: 'Instructor and Developer',
+            skills: [
+                'HTML',
+                'CSS',
+                'JavaScript',
+                'React',
+                'Redux',
+                'Node',
+                'MongoDB',
+                'Python',
+                'D3.js'
+            ],
+            languages: ['Amharic', 'English', 'Suomi(Finnish)']
+        }
+        // Let us create a function which give information about the person object without destructuring
+
+        const getPersonInfo = obj => {
+            const skills = obj.skills
+            const formattedSkills = skills.slice(0, -1).join(', ')
+            const languages = obj.languages
+            const formattedLanguages = languages.slice(0, -1).join(', ')
+
+            personInfo = `${obj.firstName} ${obj.lastName} lives in ${obj.country}. He is  ${obj.age
+                } years old. He is an ${obj.job}. He teaches ${formattedSkills} and ${skills[skills.length - 1]
+                }. He speaks ${formattedLanguages} and a little bit of ${languages[2]}.`
+
+            return personInfo
+        }
+
+        console.log(getPersonInfo(person))
     </script>
 </body>
 
